@@ -2,5 +2,12 @@ language: ruby
 rvm: 2.3.1
 script: bundle exec rspec
 before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+deploy:
+  provider: heroku
+  api_key:
+    secure: nm6YK/8NDE54mdMWMdu3H1ESSIHOTns4eCtXKG+GIpZzepMNYSmI5iUqD0RmuMPkfN7eBfrlI9TezXadcQabdg80Hlu/rLMSqmchgtKmGHsdCZN/JvaeMVI4Zh6PmBsc8Ljj7o4/JC8PxfvjWX3CZC607I28o/rI4cBkuRTBCwi1v02GlDYj1PDoB/5UKGuxyVc/4uW7k14Q2K6HBUhpUcZgtRAiK4xhqn5sXoGd7HArXFV+NstT3aMiU0hHGZ4PySE4v5c13ejlf4Sk/S+tJjy2SzbYoopxCJghIU55G8dSSUyWOXzBYflDhpSArYHN1cDntV+FqtgqMU2s6BV7sc/HyxGdEX5mDDRR/EktERXMrUZlhZsepVFaWYW8ilgz64EjfZ1JRLkRMm9OfS100ObkKMb7xwPuSYgAFkPrDrQYTIpJXgVr2FJRmFKha30DSxzkXzW+FYSu4qUpfxmxpsi/i5pCYLgUN8LGcsSYRqmZhoG0UJblRIWDEFgxbDjr7tX5uDOPx8r0w1prhVwJf05oR/c1OTR/xEJ862Ir7BMFJLSJdYGWGTN+1ETgsfZ8QWgD5SeEf99ijOqIttZwkhOKvW4uJvcokEnjJQXk/wqbB6X9LgIg7gk+vrIv492iUYLBhVWitJrJfRSjbU9P4M2fOXY1Y2AEYLYsi7x0DXg=
+  app: enigmatic-sierra-29844
+  on:
+    repo: yongish/Ticketee
